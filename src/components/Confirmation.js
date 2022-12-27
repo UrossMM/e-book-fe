@@ -8,6 +8,7 @@ import {
   Button,
 } from "@material-ui/core";
 import axios from "axios";
+import { URL } from '../config';
 
 const Confirmation = ({ prevStep, nextStep, values }) => {
   console.log("Before");
@@ -88,7 +89,7 @@ const Confirmation = ({ prevStep, nextStep, values }) => {
       number: values.telefon,
     };
     const res = axios
-      .post("https://ebook.herokuapp.com/api/User/create", userInputData)
+      .post(`https://${URL}/api/User/create`, userInputData)
       .then((x) => {
         console.log("Uspesno poslao podatke");
       })

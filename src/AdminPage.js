@@ -16,6 +16,7 @@ import draftToHtml from "draftjs-to-html";
 import htmlToDraft from "html-to-draftjs";
 import Navbar from './components/navbar.js'
 import { useNavigate } from "react-router-dom";
+import { URL } from './config';
 
 const style = {
   position: "absolute",
@@ -61,7 +62,7 @@ const AdminPage = () => {
     {
       console.log(token)
     axios
-      .get("https://ebook.herokuapp.com/api/User/rows", {
+      .get(`https://${URL}/api/User/rows`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -79,7 +80,7 @@ const AdminPage = () => {
 
   const getHtmlForConcreteRow = async (email) => {
     await axios
-      .get("https://ebook.herokuapp.com/api/User/html/" + email, {
+      .get(`https://${URL}/api/User/html/` + email, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})
@@ -144,7 +145,7 @@ const AdminPage = () => {
 
   const deleteUserData = async (mail) => {
     await axios
-      .delete("https://ebook.herokuapp.com/api/User/userData/" + mail, {
+      .delete(`https://${URL}}/api/User/userData/` + mail, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})

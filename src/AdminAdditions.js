@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Navbar from "./components/navbar.js";
 import { useNavigate } from "react-router-dom";
+import { URL } from './config';
 
 const AdminAdditions = () => {
   const [adminDefault, setAdminDefault] = useState({});
@@ -40,7 +41,7 @@ const AdminAdditions = () => {
       mass: parseInt(adminDefault.grams),
     };
     const res = axios
-      .post("https://ebook.herokuapp.com/api/Meal/foodstuff", foodstuffDto, {
+      .post(`https://${URL}/api/Meal/foodstuff`, foodstuffDto, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})

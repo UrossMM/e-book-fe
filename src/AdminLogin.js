@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { URL } from './config';
 
 const AdminLogin = () => {
     const [errorMessage, setErrorMessage] = useState();
@@ -27,7 +28,7 @@ const AdminLogin = () => {
         password: adminPassword
     }
     console.log(adminInputDataDto);
-    axios.post('https://ebook.herokuapp.com/api/Admin/login', adminInputDataDto)
+    axios.post(`https://${URL}/api/Admin/login`, adminInputDataDto)
     .then((x) => {
         //upis tokena u localstorage
         //console.log(x.data["token"])

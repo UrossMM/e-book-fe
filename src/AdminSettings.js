@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
 import Navbar from "./components/navbar.js";
 import { useNavigate } from "react-router-dom";
+import { URL } from './config';
 
 const AdminSettings = () => {
   const [adminDefault, setAdminDefault] = useState({});
@@ -19,7 +20,7 @@ const AdminSettings = () => {
       navigate("../login");
     else
     {
-      axios.get("https://ebook.herokuapp.com/api/User/adminDefaults", {
+      axios.get(`https://${URL}/api/User/adminDefaults`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }}).then((x) => {
@@ -43,7 +44,7 @@ const AdminSettings = () => {
       keepingFitText: adminDefault.keepingFitText
     };
     const res = axios
-      .put("https://ebook.herokuapp.com/api/User/adminDefaults", adminDefaultDto, {
+      .put(`https://${URL}/api/User/adminDefaults`, adminDefaultDto, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})

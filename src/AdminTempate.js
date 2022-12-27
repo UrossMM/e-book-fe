@@ -13,6 +13,7 @@ import { React, useEffect } from "react";
 import axios from "axios";
 import MealsManagementService from "./services/MealsManagement.service";
 import { useNavigate } from "react-router-dom";
+import { URL } from './config';
 
 const AdminTempate = () => {
   const [templateNames, setTemplateNames] = useState([]);
@@ -299,7 +300,7 @@ const AdminTempate = () => {
     }
     console.log(submitObj);
 
-    axios.post("https://ebook.herokuapp.com/api/Meal/template",  submitObj, {
+    axios.post(`https://${URL}/api/Meal/template`,  submitObj, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }})
@@ -321,7 +322,7 @@ const AdminTempate = () => {
       navigate("../login");
       else{
     const res = axios
-      .get("https://ebook.herokuapp.com/api/Meal/template", {
+      .get(`https://${URL}/api/Meal/template`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -338,7 +339,7 @@ const AdminTempate = () => {
 
 
       axios
-      .get("https://ebook.herokuapp.com/api/Meal/foodstuffsNames", {
+      .get(`https://${URL}/api/Meal/foodstuffsNames`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})
@@ -361,7 +362,7 @@ const AdminTempate = () => {
 
   const deleteTemplate = () => {
     const res = axios
-      .delete("https://ebook.herokuapp.com/api/Meal/template/" + selectedOption, {
+      .delete(`https://${URL}/api/Meal/template/` + selectedOption, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

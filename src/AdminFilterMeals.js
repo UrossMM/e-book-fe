@@ -16,6 +16,7 @@ import {
 import Navbar from "./components/navbar.js";
 import Collapsible from 'react-collapsible';
 import { useNavigate } from "react-router-dom";
+import { URL } from './config';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -54,7 +55,7 @@ const AdminFilterMeals = () => {
       navigate("../login");
       else{
     const res = axios
-      .get("https://ebook.herokuapp.com/api/Meal/additions", {
+      .get(`https://${URL}/api/Meal/additions`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})
@@ -107,7 +108,7 @@ const AdminFilterMeals = () => {
     };
     const res = axios
       .get(
-        "https://ebook.herokuapp.com/api/Meal/filterMeals?" +
+        "https://localhost:7231/api/Meal/filterMeals?" +
           "calories=" +
           mealFilter.calories +
           "&caloriesPlus=" +

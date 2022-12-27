@@ -13,6 +13,7 @@ import {
   Select,
   MenuItem,
 } from "@material-ui/core";
+import { URL } from '../config';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -65,7 +66,7 @@ const PersonalDetails = ({
 
     // ovde pozovi func sa back i pribavi sastojeke
     const res = axios
-      .get("https://ebook.herokuapp.com/api/Meal/additions")
+      .get(`https://${URL}/api/Meal/additions`)
       .then((x) => {
         console.log("Uspesno primio podatke");
         console.log(x.data);

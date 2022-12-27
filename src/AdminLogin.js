@@ -27,7 +27,7 @@ const AdminLogin = () => {
         password: adminPassword
     }
     console.log(adminInputDataDto);
-    axios.post('https://localhost:7231/api/Admin/login', adminInputDataDto)
+    axios.post('https://ebook.herokuapp.com/api/Admin/login', adminInputDataDto)
     .then((x) => {
         //upis tokena u localstorage
         //console.log(x.data["token"])

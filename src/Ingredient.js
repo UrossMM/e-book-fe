@@ -5,6 +5,7 @@ import { FieldArray, useFieldArray } from "react-final-form-arrays";
 
 const Ingredient = ({ indexSastojka, nameSastojka, day, sviSastojci, indexMeal }) => {
   const { mutators, change } = useForm();
+  const s = `meals`;
   useEffect(() => {
     //change(`${name}.timeToEat`, index);
     //change(`${name}.day`, day)
@@ -12,7 +13,7 @@ const Ingredient = ({ indexSastojka, nameSastojka, day, sviSastojci, indexMeal }
 
   return (
     <div>
-      <Field name={`${nameSastojka}name`} component="select">
+      <Field name={`${nameSastojka}name`} component="select" className="selectIngredientElements">
         <option />
         {sviSastojci.map((sastojak) => (
           <option value={sastojak}>{sastojak}</option>
@@ -23,19 +24,19 @@ const Ingredient = ({ indexSastojka, nameSastojka, day, sviSastojci, indexMeal }
         component="input"
         type="number"
         placeholder="Masa(g)"
-        className="masaInputMealElement"
+        className="masaInputIngredientElement"
       />
-      <button
+      {/* <button
         type="button"
-        className="removeMealButton"
+        className="removeIngredientButton"
         onClick={() => {
           console.log(indexSastojka);
           console.log(`${day}.meals.ingredient`);
-          mutators.remove(`${nameSastojka}.ingredient`, indexSastojka);
+          mutators.remove(`${day}.meals.ingredient`, indexSastojka);
         }}
       >
-        Izbaci namirnicu
-      </button>
+        Izbaci 
+      </button> */}
     </div>
   );
 };

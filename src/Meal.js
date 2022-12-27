@@ -19,11 +19,11 @@ const Meal = ({ index, name, day, sviSastojci, dayNum }) => {
   const Controlls = () => { 
     const {
       fields: { push },     
-    } = useFieldArray(`${name}.ingredient`);
+    } = useFieldArray(`${name}.foodstuffs`);
     return (
       <div>
         <button
-          //className="addMealButton"
+          className="addIngredientButton"
           type="button"
           onClick={() => {
             push({});
@@ -38,8 +38,9 @@ const Meal = ({ index, name, day, sviSastojci, dayNum }) => {
 
   return (
     <div className="divMealElement">
-      <div className="divMealElementInputs">
-      <div className="divMealElementExcludeRecept">
+      {/* <div className="divMealElementInputs"> */}
+      {/* <div className="divMealElementExcludeRecept"> */}
+      <div className = "divMealElementNameAndButtonDelete">
       <Field
         name={`${name}name`}
         component="input"
@@ -47,6 +48,17 @@ const Meal = ({ index, name, day, sviSastojci, dayNum }) => {
         placeholder="Ime"
         className="imeInputMealElement"
       />
+      {/* <button
+        type="button"
+        className="removeMealButton"
+        onClick={() => {
+          console.log(`${day}.meals`);
+          mutators.remove(`${day}.meals`, index);
+        }}
+      >
+        Izbaci obrok
+      </button> */}
+      </div>
       {/* <Field
         name={`${name}ingredient`}
         component="input"
@@ -62,7 +74,7 @@ const Meal = ({ index, name, day, sviSastojci, dayNum }) => {
         className="kalorijeInputMealElement"
       /> */} 
       <Controlls></Controlls>
-      <FieldArray className="fieldArrayOneDayOfMeals" name={`${name}.ingredient`}> 
+      <FieldArray className="fieldArrayOneDayOfMeals" name={`${name}.foodstuffs`}> 
         {({ fields, meta }) => {
           return fields.map((ingName, indexSastojka) => (
             <Ingredient indexSastojka={indexSastojka} nameSastojka={ingName} day={day} sviSastojci={sviSastojci} indexMeal={index}></Ingredient> 
@@ -86,8 +98,8 @@ const Meal = ({ index, name, day, sviSastojci, dayNum }) => {
         placeholder="Masa(g)"
         className="masaInputMealElement"
       /> */}
-      </div>
-      <div className="divMealElementIncludeRecept">
+      {/* </div> */}
+      {/* <div className="divMealElementIncludeRecept"> */}
         <Field
           name={`${name}recipe`}
           component="input"
@@ -95,19 +107,11 @@ const Meal = ({ index, name, day, sviSastojci, dayNum }) => {
           placeholder="Recept"
           className="receptInputMealElement"
         />
-      </div>
+      {/* </div> */}
         <hr className="hrMealElement"></hr>
-      </div>
-      <button
-        type="button"
-        className="removeMealButton"
-        onClick={() => {
-          console.log(`${day}.meals`);
-          mutators.remove(`${day}.meals`, index);
-        }}
-      >
-        Izbaci obrok
-      </button>
+      {/* </div> */}
+      
+      
     </div>
   );
 };

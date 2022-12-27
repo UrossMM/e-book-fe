@@ -4,7 +4,8 @@ import { FieldArray, useFieldArray } from "react-final-form-arrays";
 import arrayMutators from "final-form-arrays";
 import Meal from "./Meal";
 
-const OneDayOfMeals = ({sviSastojci, day, dayName, dayNum}) => {
+const OneDayOfMeals = ({sviSastojci, day, dayName, dayNum, numOfMealsPerDay}) => {
+  //var insertPosition = numOfMealsPerDay;
   const Controlls = () => { //controlls je komponenta koja predstavlja button koji na klik kreira inpute za jedan obrok u odredjenom danu (kreira jedan field)
     const {
       fields: { push },     //fields su inputi za jedan obrok u odredjenom danu i oni se mapiraju u Meal
@@ -16,6 +17,8 @@ const OneDayOfMeals = ({sviSastojci, day, dayName, dayNum}) => {
           type="button"
           onClick={() => {
             push({});
+            //insert(insertPosition, {});
+            //insertPosition++;
           }}
         >
           + Dodaj obrok
@@ -32,7 +35,6 @@ const OneDayOfMeals = ({sviSastojci, day, dayName, dayNum}) => {
         {({ fields, meta }) => {
           return fields.map((name, index) => (
             <Meal index={index} name={name} day={day} sviSastojci={sviSastojci} dayNum={dayNum}></Meal> 
-            
           ));
         }}
       </FieldArray>

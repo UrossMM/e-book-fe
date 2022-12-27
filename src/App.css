@@ -658,13 +658,13 @@ background-color: #069a64;
 }
 .removeMealButton{
   width: 10%;
-  height: 50px;
+  height: 40px;
   background-color: #d9534f;
   color: white;
   font-weight: bold;
   font-size: 13px;
   margin-left: 1%;
-  margin-top: 25px;
+  /* margin-top: 25px; */
   /* border: 1px solid yellow; */
 }
 
@@ -677,10 +677,16 @@ background-color: #069a64;
 
 .divMealElement{
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-direction: column;
   margin-top: 0.9%;
-  height: 150px;
+  /* height: 150px; */
   width: 100%;
+  margin-bottom: 4%;
+}
+.divMealElementNameAndButtonDelete{
+  display: flex;
+  flex-direction: row;
 }
 .divMealElementInputs{
   display: flex;
@@ -748,6 +754,42 @@ background-color: #069a64;
 
 .submitButtonAdminTemplate:hover{
   background-color: #069a64;
+}
+
+.addIngredientButton{
+  width: 10%;
+  /* margin-bottom: 1%; */
+  margin-top: 1%;
+  height: 35px;
+  background-color: #04AA6D;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+.selectIngredientElements{
+  width: 20%;
+  height: 25px;
+  margin: 7px 5px 1px 0px;
+}
+
+.masaInputIngredientElement{
+  width: 20%;
+  height: 20px;
+  margin: 7px 5px 1px 0px;
+}
+
+.removeIngredientButton{
+  width: 10%;
+  margin-bottom: 1%;
+  /* margin-top: 1%; */
+  height: 25px;
+  background-color: #d9534f; 
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+}
+.removeIngredientButton:hover{
+  background-color: #b64642
 }
 /* ----------------------ADMIN LOGIN ---------------------------------- */
 .adminLogin{

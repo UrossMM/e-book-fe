@@ -7,6 +7,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  HashRouter
 } from "react-router-dom";
 import Signup from "./components/Signup";
 import AdminPage from "./AdminPage";
@@ -19,7 +20,7 @@ import AdminAdditions from "./AdminAdditions";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="data" element={<Signup />} />
@@ -30,7 +31,7 @@ root.render(
       <Route path="login" element={<AdminLogin/>} />
       <Route path="foodstuffs" element={<AdminAdditions/>} />
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
   // </React.StrictMode>
 );
 

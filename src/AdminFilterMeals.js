@@ -54,7 +54,7 @@ const AdminFilterMeals = () => {
       navigate("../login");
       else{
     const res = axios
-      .get("https://localhost:7231/api/Meal/additions", {
+      .get("https://ebook.herokuapp.com/api/Meal/additions", {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})
@@ -107,7 +107,7 @@ const AdminFilterMeals = () => {
     };
     const res = axios
       .get(
-        "https://localhost:7231/api/Meal/filterMeals?" +
+        "https://ebook.herokuapp.com/api/Meal/filterMeals?" +
           "calories=" +
           mealFilter.calories +
           "&caloriesPlus=" +
@@ -130,6 +130,9 @@ const AdminFilterMeals = () => {
               <p><strong>{el.name}</strong></p>
               <p>Sastojci: {el.ingredient}</p>
               <p>Masa: {el.mass}</p>
+              <p>Proteini: {el.proteins}</p>
+              <p>Masti: {el.fats}</p>
+              <p>Ugljeni hidrati: {el.carbohydrates}</p>
               <p>Kalorije: {el.calories}</p>
               <p>Recept: {el.recipe}</p>
             </div>

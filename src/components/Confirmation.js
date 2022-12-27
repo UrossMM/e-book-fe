@@ -88,7 +88,7 @@ const Confirmation = ({ prevStep, nextStep, values }) => {
       number: values.telefon,
     };
     const res = axios
-      .post("https://localhost:7231/api/User/create", userInputData)
+      .post("https://ebook.herokuapp.com/api/User/create", userInputData)
       .then((x) => {
         console.log("Uspesno poslao podatke");
       })

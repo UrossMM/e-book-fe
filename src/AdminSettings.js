@@ -19,7 +19,7 @@ const AdminSettings = () => {
       navigate("../login");
     else
     {
-      axios.get("https://localhost:7231/api/User/adminDefaults", {
+      axios.get("https://ebook.herokuapp.com/api/User/adminDefaults", {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }}).then((x) => {
@@ -43,7 +43,7 @@ const AdminSettings = () => {
       keepingFitText: adminDefault.keepingFitText
     };
     const res = axios
-      .put("https://localhost:7231/api/User/adminDefaults", adminDefaultDto, {
+      .put("https://ebook.herokuapp.com/api/User/adminDefaults", adminDefaultDto, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})

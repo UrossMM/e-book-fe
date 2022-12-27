@@ -65,7 +65,7 @@ const PersonalDetails = ({
 
     // ovde pozovi func sa back i pribavi sastojeke
     const res = axios
-      .get("https://localhost:7231/api/Meal/additions")
+      .get("https://ebook.herokuapp.com/api/Meal/additions")
       .then((x) => {
         console.log("Uspesno primio podatke");
         console.log(x.data);

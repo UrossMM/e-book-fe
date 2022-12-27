@@ -37,10 +37,10 @@ const AdminAdditions = () => {
       fats: parseFloat(adminDefault.fats),
       carbohydrates: parseFloat(adminDefault.carbohydrates),
       calories: parseInt(adminDefault.calories),
-      grams: parseInt(adminDefault.grams),
+      mass: parseInt(adminDefault.grams),
     };
     const res = axios
-      .post("https://localhost:7231/api/Meal/foodstuff", foodstuffDto, {
+      .post("https://ebook.herokuapp.com/api/Meal/foodstuff", foodstuffDto, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})

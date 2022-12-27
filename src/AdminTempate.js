@@ -24,7 +24,7 @@ const AdminTempate = () => {
         {
           timeToEat: 0,
           day: 0,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -33,7 +33,7 @@ const AdminTempate = () => {
         {
           timeToEat: 1,
           day: 0,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -42,26 +42,26 @@ const AdminTempate = () => {
         {
           timeToEat: 2,
           day: 0,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
           ]
         },
-        {
-          timeToEat: 3,
-          day: 0,
-          ingredient:[{
-            mass: 0,
-            name: ""
-          }
-          ]
-        },
+        // {
+        //   timeToEat: 3,
+        //   day: 0,
+        //   foodstuffs:[{
+        //     mass: 0,
+        //     name: ""
+        //   }
+        //   ]
+        // },
 
         {
           timeToEat: 0,
           day: 1,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -70,7 +70,7 @@ const AdminTempate = () => {
         {
           timeToEat: 1,
           day: 1,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -79,26 +79,26 @@ const AdminTempate = () => {
         {
           timeToEat: 2,
           day: 1,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
           ]
         },
-        {
-          timeToEat: 3,
-          day: 1,
-          ingredient:[{
-            mass: 0,
-            name: ""
-          }
-          ]
-        },
+        // {
+        //   timeToEat: 3,
+        //   day: 1,
+        //   foodstuffs:[{
+        //     mass: 0,
+        //     name: ""
+        //   }
+        //   ]
+        // },
 
         {
           timeToEat: 0,
           day: 2,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -107,7 +107,7 @@ const AdminTempate = () => {
         {
           timeToEat: 1,
           day: 2,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -116,21 +116,21 @@ const AdminTempate = () => {
         {
           timeToEat: 2,
           day: 2,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
           ]
         },
-        {
-          timeToEat: 3,
-          day: 2,
-          ingredient:[{
-            mass: 0,
-            name: ""
-          }
-          ]
-        },
+        // {
+        //   timeToEat: 3,
+        //   day: 2,
+        //   foodstuffs:[{
+        //     mass: 0,
+        //     name: ""
+        //   }
+        //   ]
+        // },
 
         {
           timeToEat: 0,
@@ -139,7 +139,7 @@ const AdminTempate = () => {
         {
           timeToEat: 1,
           day: 3,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -148,26 +148,26 @@ const AdminTempate = () => {
         {
           timeToEat: 2,
           day: 3,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
           ]
         },
-        {
-          timeToEat: 3,
-          day: 3,
-          ingredient:[{
-            mass: 0,
-            name: ""
-          }
-          ]
-        },
+        // {
+        //   timeToEat: 3,
+        //   day: 3,
+        //   foodstuffs:[{
+        //     mass: 0,
+        //     name: ""
+        //   }
+        //   ]
+        // },
 
         {
           timeToEat: 0,
           day: 4,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -176,7 +176,7 @@ const AdminTempate = () => {
         {
           timeToEat: 1,
           day: 4,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -185,26 +185,26 @@ const AdminTempate = () => {
         {
           timeToEat: 2,
           day: 4,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
           ]
         },
-        {
-          timeToEat: 3,
-          day: 4,
-          ingredient:[{
-            mass: 0,
-            name: ""
-          }
-          ]
-        },
+        // {
+        //   timeToEat: 3,
+        //   day: 4,
+        //   foodstuffs:[{
+        //     mass: 0,
+        //     name: ""
+        //   }
+        //   ]
+        // },
 
         {
           timeToEat: 0,
           day: 5,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -213,7 +213,7 @@ const AdminTempate = () => {
         {
           timeToEat: 1,
           day: 5,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -222,26 +222,26 @@ const AdminTempate = () => {
         {
           timeToEat: 2,
           day: 5,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
           ]
         },
-        {
-          timeToEat: 3,
-          day: 5,
-          ingredient:[{
-            mass: 0,
-            name: ""
-          }
-          ]
-        },
+        // {
+        //   timeToEat: 3,
+        //   day: 5,
+        //   foodstuffs:[{
+        //     mass: 0,
+        //     name: ""
+        //   }
+        //   ]
+        // },
 
         {
           timeToEat: 0,
           day: 6,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -250,7 +250,7 @@ const AdminTempate = () => {
         {
           timeToEat: 1,
           day: 6,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
@@ -259,21 +259,21 @@ const AdminTempate = () => {
         {
           timeToEat: 2,
           day: 6,
-          ingredient:[{
+          foodstuffs:[{
             mass: 0,
             name: ""
           }
           ]
         },
-        {
-          timeToEat: 3,
-          day: 6,
-          ingredient:[{
-            mass: 0,
-            name: ""
-          }
-          ]
-        },
+        // {
+        //   timeToEat: 3,
+        //   day: 6,
+        //   foodstuffs:[{
+        //     mass: 0,
+        //     name: ""
+        //   }
+        //   ]
+        // },
       ],
     })
   );
@@ -299,13 +299,13 @@ const AdminTempate = () => {
     }
     console.log(submitObj);
 
-    axios.post("https://localhost:7231/api/Meal/template",  submitObj, {
+    axios.post("https://ebook.herokuapp.com/api/Meal/template",  submitObj, {
       headers: {
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       }})
       .then(async (x) => {
         console.log('poslao podatke za templejt');
-        window.location.replace("/templates");
+        window.location.replace("/#/templates");//
       })
       .catch((error) => {
         console.log(error);
@@ -321,7 +321,7 @@ const AdminTempate = () => {
       navigate("../login");
       else{
     const res = axios
-      .get("https://localhost:7231/api/Meal/template", {
+      .get("https://ebook.herokuapp.com/api/Meal/template", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -338,7 +338,7 @@ const AdminTempate = () => {
 
 
       axios
-      .get("https://localhost:7231/api/Meal/additions", {
+      .get("https://ebook.herokuapp.com/api/Meal/foodstuffsNames", {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})
@@ -361,13 +361,13 @@ const AdminTempate = () => {
 
   const deleteTemplate = () => {
     const res = axios
-      .delete("https://localhost:7231/api/Meal/template/" + selectedOption, {
+      .delete("https://ebook.herokuapp.com/api/Meal/template/" + selectedOption, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       })
       .then((x) => {
-        window.location.replace("/templates");
+        window.location.reload(true);//
       })
       .catch((error) => {
         console.log(error);
@@ -436,7 +436,7 @@ const AdminTempate = () => {
                   <Typography>Ponedeljak</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <OneDayOfMeals sviSastojci={sastojci} dayNum={0} day="ponedeljak" ></OneDayOfMeals>
+                  <OneDayOfMeals sviSastojci={sastojci} dayNum={0} day="ponedeljak" numOfMealsPerDay={4}></OneDayOfMeals>
                 </AccordionDetails>
               </Accordion>
 
@@ -449,7 +449,7 @@ const AdminTempate = () => {
                   <Typography>Utorak</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <OneDayOfMeals sviSastojci={sastojci} dayNum={1} day="utorak"></OneDayOfMeals>
+                  <OneDayOfMeals sviSastojci={sastojci} dayNum={1} day="utorak" numOfMealsPerDay={4}></OneDayOfMeals>
                 </AccordionDetails>
               </Accordion>
 
@@ -466,6 +466,7 @@ const AdminTempate = () => {
                   sviSastojci={sastojci} 
                     day="sreda"
                     dayNum={2} 
+                    numOfMealsPerDay={4}
                     // dayName="Wendsday"
                   ></OneDayOfMeals>
                 </AccordionDetails>
@@ -480,7 +481,7 @@ const AdminTempate = () => {
                   <Typography>Cetvrtak</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <OneDayOfMeals sviSastojci={sastojci} dayNum={3} day="cetvrtak"></OneDayOfMeals>
+                  <OneDayOfMeals sviSastojci={sastojci} dayNum={3} day="cetvrtak" numOfMealsPerDay={4}></OneDayOfMeals>
                 </AccordionDetails>
               </Accordion>
 
@@ -493,7 +494,7 @@ const AdminTempate = () => {
                   <Typography>Petak</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <OneDayOfMeals sviSastojci={sastojci} dayNum={4} day="petak"></OneDayOfMeals>
+                  <OneDayOfMeals sviSastojci={sastojci} dayNum={4} day="petak" numOfMealsPerDay={4}></OneDayOfMeals>
                 </AccordionDetails>
               </Accordion>
 
@@ -506,7 +507,7 @@ const AdminTempate = () => {
                   <Typography>Subota</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <OneDayOfMeals sviSastojci={sastojci} dayNum={5} day="subota"></OneDayOfMeals>
+                  <OneDayOfMeals sviSastojci={sastojci} dayNum={5} day="subota" numOfMealsPerDay={4}></OneDayOfMeals>
                 </AccordionDetails>
               </Accordion>
 
@@ -519,7 +520,7 @@ const AdminTempate = () => {
                   <Typography>Nedelja</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <OneDayOfMeals sviSastojci={sastojci} dayNum={6} day="nedelja"></OneDayOfMeals>
+                  <OneDayOfMeals sviSastojci={sastojci} dayNum={6} day="nedelja" numOfMealsPerDay={4}></OneDayOfMeals>
                 </AccordionDetails>
               </Accordion>
 
@@ -529,7 +530,7 @@ const AdminTempate = () => {
                   Potvrdi
                 </button>
               </div>
-              <pre>{JSON.stringify(values, 0, 2)}</pre>
+              {/* <pre>{JSON.stringify(values, 0, 2)}</pre> */}
             </form>
           )}
         />

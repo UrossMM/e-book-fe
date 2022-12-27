@@ -61,7 +61,7 @@ const AdminPage = () => {
     {
       console.log(token)
     axios
-      .get("https://localhost:7231/api/User/rows", {
+      .get("https://ebook.herokuapp.com/api/User/rows", {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -79,7 +79,7 @@ const AdminPage = () => {
 
   const getHtmlForConcreteRow = async (email) => {
     await axios
-      .get("https://localhost:7231/api/User/html/" + email, {
+      .get("https://ebook.herokuapp.com/api/User/html/" + email, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})
@@ -127,7 +127,7 @@ const AdminPage = () => {
       .then(async (x) => {
         handleClose();
         console.log(emailDto);
-        //deleteUserData(mail);
+        deleteUserData(mail);
         setMail("");
         setDescription(
           EditorState.createWithContent(
@@ -135,7 +135,7 @@ const AdminPage = () => {
           )
         );
         console.log(description);
-        window.location.replace("/admin");
+        window.location.reload(true);//
       })
       .catch((error) => {
         console.log(error);
@@ -144,7 +144,7 @@ const AdminPage = () => {
 
   const deleteUserData = async (mail) => {
     await axios
-      .delete("https://localhost:7231/api/User/userData/" + mail, {
+      .delete("https://ebook.herokuapp.com/api/User/userData/" + mail, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }})
@@ -173,8 +173,8 @@ const AdminPage = () => {
     return new Promise(
       (resolve, reject) =>{
         const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'https://api.imgur.com/3/image');
-        xhr.setRequestHeader('Authorization', 'Client-ID f5f74e27950b037')  //0f5a7c212beb5bfb4ee14d39505a20eebb7c391c
+        xhr.open('POST', 'https://api.imgbb.com/1/upload?expiration=9000&key=8108d069dea408975bf2a6ef269040b7'); //  //https://api.imgur.com/3/image
+       // xhr.setRequestHeader('Authorization', 'Client-ID f5f74e27950b037')  //0f5a7c212beb5bfb4ee14d39505a20eebb7c391c
         const data = new FormData();
         data.append('image', file);
         xhr.send(data);
@@ -210,7 +210,7 @@ const AdminPage = () => {
               setMail(record.mail);
             }}
           >
-            Pogledaj plan
+            Pogledaj e-book
           </Button>
           <Modal
             open={open}
@@ -281,8 +281,8 @@ const AdminPage = () => {
                       inputAccept: 'image/gif,image/jpeg,image/jpg,image/png,image/svg',
                       alt: { present: false, mandatory: false },
                       defaultSize: {
-                        height: 'auto',
-                        width: 'auto',
+                        height: '400px',
+                        width: '400px',
                       },
                     },
                   }
@@ -322,7 +322,7 @@ const AdminPage = () => {
       <Navbar />
       <h1 className="headerAdminPage">
         {" "}
-        Broj korisnika koji cekaju na svoj plan ishrane: {userTableData.length}
+        Broj korisnika koji cekaju na svoj e-book: {userTableData.length}
       </h1>
 
       <table className="tableAdminPage">

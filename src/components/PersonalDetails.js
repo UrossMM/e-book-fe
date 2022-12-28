@@ -1,8 +1,7 @@
-import { React, Component, useState, useEffect } from "react";
-import { Theme, useTheme } from "@mui/material/styles";
+import { React, useState, useEffect } from "react";
+import { useTheme } from "@mui/material/styles";
 import axios from "axios";
 import {
-  Container,
   Typography,
   Grid,
   TextField,
@@ -58,31 +57,15 @@ const PersonalDetails = ({
   const [selektovaniSastojci, setSelektovaniSastojci] = useState([]);
 
   useEffect(() => {
-    console.log("sastojci useeffect");
-    console.log(sastojci);
-
-    console.log("selektovanisastojci useeffect");
-    console.log(selektovaniSastojci);
-
-    // ovde pozovi func sa back i pribavi sastojeke
     const res = axios
       .get(`https://${URL}/api/Meal/additions`)
       .then((x) => {
-        console.log("Uspesno primio podatke");
-        console.log(x.data);
         setSastojci(x.data);
-        console.log(sastojci); //tu nece da ih prikaze, prikazuje idalje prazan niz ali sve radi kako treba
       })
-      .catch((error) => {
-        console.log(error);
-      });
-
-    // nakon toga
-    // setSastojci(["so","secer"])
+      .catch((error) => { });
   }, []);
 
   const Continue = (e) => {
-    // e.preventDefault();
     nextStep();
   };
   const theme = useTheme();
@@ -103,27 +86,20 @@ const PersonalDetails = ({
   };
 
   const fuseFunctions = (e) => {
-    console.log("Uso u fusefunctions u personal details");
     handleChangeSastojci(selektovaniSastojci);
     Continue();
   };
 
-  const cannotGoToTheNextStep = () =>{
+  const cannotGoToTheNextStep = () => {
     if(values.mejl.trim().length == 0 || values.mejl.includes("@")==false)
     {
-      console.log("los mejl");
       return true;
-
     }
     if(values.brojObroka<3 || values.brojObroka>6)
     {
-      console.log("los roj obroka");
-      console.log(values.brojObroka)
-            return true;
-
+      return true;
     }
-    console.log(values.brojObroka)
-    console.log("sve dobro")
+
     return false;
   }
 

@@ -9,16 +9,13 @@ const Landing = () => {
 
   return (
     <div id="sekcija">
-      {/* <h1 class="headerLanding">
-        Na pravom si mestu da dobijes plan ishrane napravljen iskljucivo po tebi
-      </h1> */}
       <div className="divButtonsLanding">
-        <button class="buttonTextLanding">
+        <button className="buttonTextLanding">
           <p>Na pravom si mestu</p>
           <p>da dobijes <span className="spanPlanIshraneLanding">PLAN ISHRANE</span></p>
           <p>napravljen iskljucivo po tebi</p>  
         </button>
-        <button class="buttonInputLanding" onClick={goToSIgnUp}>
+        <button className="buttonInputLanding" onClick={goToSIgnUp}>
           Unesi podatke
         </button>
       </div>

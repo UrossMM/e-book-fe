@@ -64,43 +64,10 @@ height: 10%;
 background-color: #ffe202;
 font-size:x-large;
 }
-.buttonInputLanding:hover {background-color: #f2ae00;}
 
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-/* .App-link {
-  color: #61dafb;
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.buttonInputLanding:hover {
+  background-color: #f2ae00;
+}
 
 /* ------------------------------FILTER MEALS------------------------ */
 .filterMeals{
@@ -315,8 +282,9 @@ height: 50%;
   margin-left: 30%;
   margin-right: 30%;
   height: fit-content;
-  margin-top: 2%;
   padding: 5%;
+  position: relative;
+  margin: auto;
 }
 
 .formUserDetails{
@@ -367,7 +335,7 @@ height: 50%;
 /* -------------------------------------CONFIRMATION-------------------------------------------- */
 .confirmationPage{
   background-color: #04AA6D;
-  height:fit-content;
+  height: 100%;
   display: flex;
 }
 
@@ -380,11 +348,14 @@ height: 50%;
   height: fit-content;
   margin-top: 3%;
   padding: 5%;
+  position: relative;
+  margin: auto;
 }
 
 .formConfirmation{
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 /* --------------------------------------------------------------------------------- */
 /* --------------------------ADMIN PAGE -------------------------------------------- */
@@ -835,5 +806,12 @@ background-color: #069a64;
 
 #profile-img{
   width: 200px;
-  
+}
+
+.finalniPodatak {
+  font-weight: bold;
+}
+
+.vrednostFinalnogPodatka {
+  font-weight: 100;
 }

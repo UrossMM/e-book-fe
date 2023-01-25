@@ -1,7 +1,5 @@
-import { React, Component } from "react";
-// import { makeStyles } from '@material-ui/core/styles';
+import { React } from "react";
 import {
-  Container,
   Typography,
   Grid,
   TextField,
@@ -13,33 +11,23 @@ import {
 } from "@material-ui/core";
 
 const UserDetails = ({ nextStep, handleChange, values }) => {
-  // for continue event listener
   const Continue = (e) => {
-    //e.preventDefault();
     nextStep();
   };
 
   const cannotGoToTheNextStep = () =>{
     if(values.godine<15 || values.godine>90)
     {
-      console.log("los godine");
-            return true;
-
+      return true;
     }
     if(values.visina<120 || values.visina>260)
     {
-      console.log("los visina");
-            return true;
-
+      return true;
     }
     if(values.tezina<30 || values.tezina>220)
     {
-      console.log("los tezina");
-            return true;
-
+      return true;
     }
-    console.log(values.brojObroka)
-    console.log("sve dobro")
     return false;
   }
 
@@ -58,12 +46,10 @@ const UserDetails = ({ nextStep, handleChange, values }) => {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                //value={pol}
                 label="Pol"
                 onChange={handleChange("pol")}
-                defaultValue={values.pol}
+                value={values.pol}
                 required
-                //placeholder="Pol"
               >
                 <MenuItem value={0}>M</MenuItem>
                 <MenuItem value={1}>Z</MenuItem>
@@ -129,12 +115,10 @@ const UserDetails = ({ nextStep, handleChange, values }) => {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                //value={pol}
                 label="Nivo aktivnosti"
                 onChange={handleChange("nivo")}
-                defaultValue={values.nivo}
+                value={values.nivo}
                 required
-                //placeholder="Nivo aktivnosti"
               >
                 <MenuItem value={0}>Minimalno aktivan/Neaktivan</MenuItem>
                 <MenuItem value={1}>Malo aktivan</MenuItem>
@@ -150,12 +134,10 @@ const UserDetails = ({ nextStep, handleChange, values }) => {
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
-                //value={pol}
                 label="Cilj"
                 onChange={handleChange("cilj")}
-                defaultValue={values.cilj}
+                value={values.cilj}
                 required
-                // placeholder="Cilj"
               >
                 <MenuItem value={0}>Mrsavljenje</MenuItem>
                 <MenuItem value={1}>Gojenje</MenuItem>
